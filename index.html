@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="Shift-JIS" />
+<meta name="description" content="" />
+<title></title>
+<link href="css/reset.css" media="all" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+<script type="text/javascript" src="inc/jquery.mb.YTPlayer.js"></script>
+    
+    
+        <!-- 後ろでYouTube流すやつ -->
+    
+<script>
+  $(function(){
+      $(".player").mb_YTPlayer();
+    });
+</script>
+
+    
+    <script>
+function randombgm(){
+fLen=3;
+fName = Math.floor(Math.random() * fLen) ;
+var scriptwin = window.open(fPath+fName+'.html','bgmwindow','toolbar=no,location=no,resizable=no,status=yes,width=0,height=0');}
+    </script>
+        
+            <!-- 後ろでYouTube流すやつおわり -->
+    
+       <!-- ボイス再生ボタン各種 -->
+      
+    <script>
+       $(function(){
+    var button = document.getElementById('aiduchi'),
+    audioArr = [
+        'audio/funfun01.wav',
+    'audio/funfun02.wav',
+      'audio/funfun03.wav',
+    ];
+
+var playAudio = function() {
+  var audio = new Audio(),
+      num = Math.floor(Math.random() * audioArr.length);
+
+  if (num == audioArr.length) {
+    num = audioArr.length - 1;
+  }
+  audio.src = audioArr[num];
+    
+  audio.play();
+}
+
+button.addEventListener('click', function() {
+  playAudio();
+}, false);
+            
+            });
+        
+    </script>   
+    
+        <script>
+       $(function(){
+    var button = document.getElementById('hagemashi'),
+    audioArr = [
+        'audio/hage01.wav',
+    'audio/hage02.wav',
+      'audio/hage03.wav',
+    ];
+
+var playAudio = function() {
+  var audio = new Audio(),
+      num = Math.floor(Math.random() * audioArr.length);
+
+  if (num == audioArr.length) {
+    num = audioArr.length - 1;
+  }
+  audio.src = audioArr[num];
+    
+  audio.play();
+}
+
+button.addEventListener('click', function() {
+  playAudio();
+}, false);
+            
+            });
+        
+    </script>   
+        <script>
+       $(function(){
+    var button = document.getElementById('bakusyo'),
+    audioArr = [
+        'audio/wara01.wav',
+    'audio/wara02.wav',
+      'audio/wara03.wav',
+    ];
+
+var playAudio = function() {
+  var audio = new Audio(),
+      num = Math.floor(Math.random() * audioArr.length);
+
+  if (num == audioArr.length) {
+    num = audioArr.length - 1;
+  }
+  audio.src = audioArr[num];
+    
+  audio.play();
+}
+
+button.addEventListener('click', function() {
+  playAudio();
+}, false);
+            
+            });
+        
+    </script>   
+    
+            <script>
+       $(function(){
+    var button = document.getElementById('nonoshiri'),
+    audioArr = [
+        'audio/nono01.wav',
+    'audio/nono02.wav',
+      'audio/nono03.wav',
+    ];
+
+var playAudio = function() {
+  var audio = new Audio(),
+      num = Math.floor(Math.random() * audioArr.length);
+
+  if (num == audioArr.length) {
+    num = audioArr.length - 1;
+  }
+  audio.src = audioArr[num];
+    
+  audio.play();
+}
+
+button.addEventListener('click', function() {
+  playAudio();
+}, false);
+            
+            });
+        
+    </script>  
+  
+     <!-- ボイス再生ボタン各種おわり -->
+    
+    
+<link href="css/YTPlayer.css" media="all" rel="stylesheet" type="text/css">
+    
+<style>
+body {
+	border: none;
+  position: relative;
+	background: #FFF;
+	color: #FFF;
+    
+}
+div#info {
+        position: fixed;
+    bottom: 10%;
+    left: 40%;
+    right: 40%;
+	width: 460px;
+	text-align: left;
+	font: 14px/16px sans-serif;
+}
+div.fade {
+	transition: all 1s;
+	-moz-transition: all 1s;
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	display: block;
+	padding: 5px 0;
+	background: rgba(0,0,0,0.1);
+      position: absolute;
+}
+div.fade:hover {
+	background: rgba(0,0,0,0.7);
+}
+
+*{
+	font-size: 16px;
+	font-family:'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+	line-height: 150%;
+}
+h1 {
+	padding: 10px 10px;
+}
+h2 {
+	padding: 5px 10px;
+	font-size:18px;
+}
+a {
+	color:#FFF;
+}
+    
+    #sumaho {
+        color:#8E7BC0
+    }
+    
+    
+#info p, #info ul li {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top:0;
+	padding-bottom:5px;
+}
+#info ul{
+	padding: 0;
+}
+#info p{
+	padding-top:0;
+	padding-bottom:10px;
+}
+#info ul.link li {
+	display: block;
+	padding-left: 15px;
+	padding-right: 15px;
+	float:left;
+}
+#info ul.link{
+	padding-top:5px;
+	padding-bottom:25px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#info a:hover {
+	background: rgba(255,255,255,0.1);
+}
+</style>
+
+    
+    
+</head>
+<body>
+<div id="sumaho">
+    <p>読み込み中…（※PC以外は非対応です。）</p>
+    </div>
+    
+<div id="info">
+
+  <div class="fade">
+    <ul class="link">
+      <li><button id="bakusyo">バカ受けボタン</button></li>
+      <li><button id="aiduchi">相槌ボタン</button></li>
+      <li><button id="hagemashi">励ましボタン</button></li>
+      <li><button id="nonoshiri">罵りボタン</button></li>
+    </ul>
+  </div>
+    
+</div>
+<a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=K13NlJKGkJ0',containment:'body',autoPlay:true, mute:true, startAt:0, opacity:1, quality: 'hd720', showYTLogo: false, showControls: false}">background movie</a>
+</body>
+</html>
