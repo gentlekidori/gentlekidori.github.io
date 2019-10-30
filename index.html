@@ -29,7 +29,33 @@ var scriptwin = window.open(fPath+fName+'.html','bgmwindow','toolbar=no,location
             <!-- 後ろでYouTube流すやつおわり -->
     
        <!-- ボイス再生ボタン各種 -->
-      
+　　<script>
+    $(function(){
+    var button = document.getElementById('special'),
+    audioArr = [
+    'audio/Spec01.wav',
+    ];
+
+var playAudio = function() {
+  var audio = new Audio(),
+      num = Math.floor(Math.random() * audioArr.length);
+
+  if (num == audioArr.length) {
+    num = audioArr.length - 1;
+  }
+  audio.src = audioArr[num];
+    
+  audio.play();
+}
+
+button.addEventListener('click', function() {
+  playAudio();
+}, false);
+            
+            });
+        
+    </script>   
+    
     <script>
        $(function(){
     var button = document.getElementById('aiduchi'),
@@ -87,36 +113,7 @@ button.addEventListener('click', function() {
             });
         
     </script>   
-        <script>
-       $(function(){
-    var button = document.getElementById('bakusyo'),
-    audioArr = [
-        'audio/wara01.wav',
-    'audio/wara02.wav',
-      'audio/wara03.wav',
-    ];
-
-var playAudio = function() {
-  var audio = new Audio(),
-      num = Math.floor(Math.random() * audioArr.length);
-
-  if (num == audioArr.length) {
-    num = audioArr.length - 1;
-  }
-  audio.src = audioArr[num];
-    
-  audio.play();
-}
-
-button.addEventListener('click', function() {
-  playAudio();
-}, false);
-            
-            });
-        
-    </script>   
-    
-            <script>
+    <script>
        $(function(){
     var button = document.getElementById('nonoshiri'),
     audioArr = [
@@ -244,7 +241,7 @@ a {
 
   <div class="fade">
     <ul class="link">
-      <li><button id="bakusyo">マジカルからにゃん</button></li>
+      <li><button id="special">マジカルからにゃん</button></li>
       <li><button id="aiduchi">相槌ボタン</button></li>
       <li><button id="hagemashi">励ましボタン</button></li>
       <li><button id="nonoshiri">罵りボタン</button></li>
